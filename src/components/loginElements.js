@@ -8,6 +8,7 @@ export const PageContainer = styled(motion.div)`
     justify-content: center;
     align-items: center;
     background-color: #5cdb95;
+    overflow: hidden;
 
     /* #05386b */
     /* #379683 */
@@ -111,5 +112,61 @@ export const Message = styled.div`
         color: #05386b;
         font-weight: 900;
         cursor: pointer;
+    }
+`
+
+export const StepButton = styled.button`
+    /* position: absolute; */
+    width:  90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 40px;
+    position: relative;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+   span{
+    width: 50%;
+    border-radius: 40px;
+    font-weight: 600;
+
+    &:nth-child(3){
+        position: absolute;
+        background: #05386b;
+        height: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        transform: ${({step})=> step? "translateX(0)" : "translateX(100%)"};
+        transition: all 0.3s ease;
+    }
+   }
+`
+
+export const InputContainer = styled(motion.div)`
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+`
+
+export const RadioContainer = styled.div`
+    display: flex;
+`
+
+export const RadioWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   &:first-child{
+    margin-right: 10px;
+   }
+    label{
+        margin-left: 5px;
     }
 `
